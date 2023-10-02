@@ -8,8 +8,10 @@ public class Server {
 
     public void start(){
         try (ServerSocket serverSocket = new ServerSocket(port)){
-            Socket client = serverSocket.accept();
-            redirectPort(client);
+            while (true){
+                Socket client = serverSocket.accept();
+                redirectPort(client);
+            }
         } catch (IOException e) {
             e.printStackTrace();
             throw new RuntimeException(e);
