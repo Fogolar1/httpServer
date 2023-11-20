@@ -4,9 +4,9 @@
 - Antes da execução do código é necessário alterar a constante *PATH* da classe *FileSenderThread* que é responsável por salvar o arquivo HTML e a imagem no computador do cliente.
 - Para acessar o código em opção de servidor, basta executar a classe *Main* sem passar nenhum argumento.
 - O servidor ficará de pé até que o código deixe de ser executado, podendo responder a 3 tipos diferentes de request : 
-- - html : retorna uma página HTML
-- - img : retorna uma imagem
-- - exit : finaliza a conexão com o cliente
+  - html : retorna uma página HTML
+  - img : retorna uma imagem
+  - exit : finaliza a conexão com o cliente
 - Para o manuseio de requests, o servidor cria uma nova *thread* com uma nova *Socket*, enviando os arquivos através dessa nova *thread*.
 
 
