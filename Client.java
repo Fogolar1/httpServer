@@ -3,6 +3,7 @@ import java.net.Socket;
 
 public class Client {
 
+    private final static String PATH = "C:\\Users\\ENZO.KF\\Desktop\\";
 
     public static void start(){
         try(Socket socket = new Socket("127.0.0.1", 3030)){
@@ -32,7 +33,7 @@ public class Client {
                 byte[] fileContentBytes = new byte[fileContentLength];
                 dataInputStream.readFully(fileContentBytes, 0, fileContentLength);
 
-                File download = new File("C:\\Users\\ENZO.KF\\" + fileName);
+                File download = new File(PATH  +  fileName);
                 System.out.println(download.getAbsolutePath());
                 FileOutputStream fileOutputStream = new FileOutputStream(download);
                 fileOutputStream.write(fileContentBytes);
